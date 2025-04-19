@@ -4,7 +4,7 @@ import "../Styles/Contact.css"
 import { Navbar } from './Navbar';
 import support from "../assets/support.png"
 
-const URL = "http://localhost:5000/api/form/contact";
+const URL = "https://students-way-b.onrender.com/api/form/contact";
 
 export const Contact = () => {
   const [contact, setContact] = useState({

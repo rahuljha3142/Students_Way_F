@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom"
 import "../Styles/AdminRegister.css";
 import { Navbar } from './Navbar';
 
-const URL = "http://localhost:5000/api/auth/register";
+const URL = "https://students-way-b.onrender.com/api/auth/register";
 
 export default function AdminRegister() {
 

@@ -1,0 +1,291 @@
+
+import { useState } from 'react';
+import { v4 as uuidv4 } from "uuid";
+import Sidebar from "./Sidebar";
+import "../../Styles/TaskScheduler.css"
+import {AiOutlineDelete, AiOutlineEdit} from 'react-icons/ai';
+import {BsCheckLg} from 'react-icons/bs';
+
+
+const TaskScheduler = () => {
+
+    const [isCompleteScreen, setIsCompleteScreen] = useState (false);
+    const [isOpen, setIsOpen] = useState(true);
+    const [todos, setTodos] = useState ([]);
+    const [newTitle, setNewTitle] = useState ('');
+    const [newDescription, setNewDescription] = useState ('');
+    // const [completedTodos, setCompletedTodos] = useState ([]);
+  
+    const toggleSidebar = () => {
+      setIsOpen(!isOpen);
+    };
+
+    let addNewTodo = (event) => {
+        event.preventDefault();
+        setTodos((prevTodos) => {
+          return [...prevTodos, { name: newTitle, description: newDescription, id: uuidv4() }];
+        });
+        setNewTitle("");
+        setNewDescription("");
+      };
+    
+      let updateTitleValue = (event) => {
+        setNewTitle(event.target.value);
+      };
+
+      let updateDesccriptionValue = (event) => {
+        setNewDescription(event.target.value);
+      };
+  
+  return (
+    <div className="taskContainer">
+        <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+        <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+            <h1 className='taskHeading'>My Tasks</h1>
+
+            <div className="todo-wrapper">
+                <div className="todo-input">
+                    <div className='todo-inout-item'>
+                        <label>Title</label>
+                        <input 
+                            type="text"    
+                            placeholder='Enter the task title' 
+                            value={newTitle}
+                            onChange={updateTitleValue}
+                            id='title'
+                            name='title'
+                        />
+                    </div>
+                    <div className='todo-inout-item'>
+                        <label>Description</label>
+                        <input 
+                        type="text" 
+                        placeholder='Enter the task description'
+                        value={newDescription}
+                        onChange={updateDesccriptionValue} 
+                        name='description'
+                        id='description'
+                    />
+                    </div>
+                    <div className='todo-inout-item'>
+                        <button type='button' className='primaryBtn'>Add</button>
+                    </div>
+                </div>
+
+                <div className="btn-area">
+                    <button 
+                        className={`secondaryBtn ${isCompleteScreen === false && 'active'}`}
+                        onClick={() => setIsCompleteScreen (false)}
+                    >
+                        Todo
+                    </button>
+                    <button
+                        className={`secondaryBtn ${isCompleteScreen === true && 'active'}`}
+                        onClick={() => setIsCompleteScreen (true)} 
+                    >
+                        Completed
+                    </button>
+                </div>
+
+            {todos.length > 0 ? (
+              <ul className="TodoList">
+                {todos.map((todo) => (
+                  <li className='TeacherItem' key={todo.id}>
+                    <span>{todo.title} - {todo.description}</span>
+                    &nbsp;&nbsp;
+                    {/* <button className="AddTeacherButton" onClick={() => deleteTeacher(teacher.id)}>Delete</button> */}
+                  </li>
+                ))}
+              </ul>    
+            ) : (
+              <p>No teachers to display</p>
+            )}  
+
+                
+
+                <div className="todo-list">
+                    <div className="todo-list-item">
+                        <h3>Task 1</h3>
+                        <p>Deadline</p>
+                    </div>
+
+                    <div>
+                        <AiOutlineDelete className='icon' />
+                        <BsCheckLg className='check-icon' />
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default TaskScheduler
+
+
+
+css
+
+/* .taskContainer{
+    background-color: #1f1e1e;
+    color:white;
+    overflow: hidden;
+  } */
+  
+  .taskHeading{
+    text-align: center;
+  }
+  
+  .todo-wrapper{
+  background: #353434;
+  padding: 2%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(27, 27, 27);
+  
+  }
+  
+  .todo-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(78, 78, 78);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .todo-input-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 25px;
+  }
+  
+  .todo-input-item label{
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .todo-input-item input{
+    padding: 8px;
+    border: none;
+    width: 250px;
+  }
+  
+  .todo-input-item input:focus{
+    outline: 2px solid rgb(0,230,122);
+  }
+  
+  .primaryBtn{
+    background-color: rgb(0,230,122);
+    color: white;
+    border:none;
+    border-radius: 0px;
+    margin-top: 25px;
+    padding: 10px;
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  .primaryBtn:hover{
+    background-color: rgb(4, 196, 106);
+  }
+  
+  
+  .secondaryBtn{
+    background-color: rgb(71, 71, 71);
+    color: white;
+    border:none;
+    border-radius: 0px;
+    margin-top: 25px;
+    padding: 10px;
+    width: fit-content;
+    cursor: pointer;
+  
+  }
+  
+  .active{
+    background-color: rgb(0,230,122);
+  }
+  
+  .todo-list{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .btn-area{
+    margin-bottom: 15px;
+  }
+  
+  .todo-list-item{
+    background-color: #414040;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 5px rgb(43, 42, 42);
+  }
+  
+  .todo-list-item h3{
+    font-size: 25px;
+    color: rgb(0,230,122);
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .todo-list-item p{
+    font-size: 14px;
+    color: rgb(161, 161, 161);
+    margin-top: 8px;
+  }
+  
+  .icon{
+    font-size: 35px;
+    cursor: pointer;
+  }
+  
+  .icon:hover{
+    color: red;
+  }
+  
+  .check-icon{
+    font-size: 25px;
+    margin-left: 10px;
+    color:rgb(0,230,122);
+    cursor: pointer;
+  }
+  
+  .check-icon:hover{
+    color: rgb(4, 196, 106);
+  }
+  
+  .edit__wrapper{
+    background-color: #414040;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit__wrapper input,.edit__wrapper textarea{
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+  }
+  
+  .edit__wrapper .primaryBtn{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 16px;
+    width:fit-content;
+  }

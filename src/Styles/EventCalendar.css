@@ -1,0 +1,78 @@
+.EventCalendarContainer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .Content{
+    flex: 1;
+    padding: 20px;
+    transition: all ease 0.8s;
+  }
+  
+  .EventCalendarHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .EventForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .AddEventInput, .AddEventTextarea {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .AddEventButton {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .AddEventButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .EventList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .EventItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .DeleteEventButton {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .DeleteEventButton:hover {
+    background-color: #c82333;
+  }
+  

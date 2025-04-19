@@ -1,0 +1,28 @@
+body{
+  text-align: center;
+}
+
+.ChooseUserContainer{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #6fc6e0;
+}
+
+.btn{
+  display: flex;
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  border: 10px solid black;
+  margin: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #cc7d37; 
+  font-weight: bold;
+  font-size: 40px;
+  text-decoration: none;
+  color: black;
+}

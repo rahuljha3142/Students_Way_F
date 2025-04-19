@@ -1,0 +1,108 @@
+.AssignmentsContainer{
+    display: flex;
+  /* padding-left: 240px; */
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+.Content{
+    flex: 1;
+    transition: all ease 0.8s;
+}
+
+.AssignmentsContent{
+    padding: 20px;
+}
+
+.AssignmentsHeader{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.AddAssignmentForm{
+    margin-bottom: 20px;
+}
+
+.AssignmentList{
+    list-style: none;
+    padding: 0;
+}
+
+.AssignmentItem{
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.AddAssignmentInput{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.AddAssignmentTextArea{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    resize: vertical;
+}
+
+.AddAssignmentButton{
+    padding: 10px 16px;
+    width: auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.SidebarContainer{
+    flex: 0 0 250px;
+}
+
+.AssignmentCard{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.AssignmentTitle{
+    margin-bottom: 10px;
+}
+
+.AssignmentDescription{
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.AssignmentButton{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #0056b3;
+    }
+}
+
+.AssignmentDoneMessage{
+    color: #28a745;
+    font-weight: bold;
+}

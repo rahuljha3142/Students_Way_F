@@ -1,0 +1,151 @@
+/* TaskScheduler.css */
+
+h1{
+   text-align: center;
+}
+
+.taskContainer {
+    display: flex;
+    /* font-family: Arial, sans-serif; */
+}
+
+.Content {
+    flex: 1;
+    padding: 20px;
+    transition: all ease 0.8s;
+}
+
+.todo-wrapper {
+    max-width: 600px;
+    margin: auto;
+}
+
+.todo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.todo-input-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-input-item label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.todo-input-item input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.primaryBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.primaryBtn:hover {
+    background-color: #0056b3;
+}
+
+.btn-area {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-area button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-area button:first-child {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-area button:first-child:hover {
+    background-color: #218838;
+}
+
+.btn-area button:last-child {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-area button:last-child:hover {
+    background-color: #138496;
+}
+
+.todo-list {
+    margin-top: 20px;
+}
+
+.todo-list h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.todo-list-item {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list-item h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.todo-list-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.todo-list-item button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.todo-list-item button:nth-child(3) {
+    background-color: #28a745;
+    color: white;
+}
+
+.todo-list-item button:nth-child(3):hover {
+    background-color: #218838;
+}
+
+.todo-list-item button:nth-child(4) {
+    background-color: #dc3545;
+    color: white;
+}
+
+.todo-list-item button:nth-child(4):hover {
+    background-color: #c82333;
+}

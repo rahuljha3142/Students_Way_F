@@ -1,0 +1,63 @@
+.ClassesContainer{
+    display: flex;
+  /* padding-left: 240px; */
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+.Content{
+    flex: 1;
+    transition: all ease 0.8s;
+}
+
+.ClassesContent{
+    padding: 20px;
+}
+
+.ClassesHeader{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ClassList{
+    
+    /* list-style: none; */
+  padding: 0;
+}
+
+.ClassItem{
+    background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.AddClassForm{
+    margin-bottom: 20px;
+}
+
+.AddClassInput{
+    padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.AddClassButton{
+    padding: 8px 16px;
+    width: auto;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ClassItem h3 {
+  margin: 0;
+  font-size: 18px;
+}

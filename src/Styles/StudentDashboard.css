@@ -1,0 +1,158 @@
+/* .AdminDashboardContainer{
+    display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+.Content{
+    flex: 1;
+  transition: margin-left 0.8s ease;
+}
+
+.TopContent{
+    display: flex;
+  gap: 20px;
+  flex: 1; 
+}
+
+.BottomContent{
+    margin-top: 20px;
+  display: flex;
+  gap: 20px; 
+}
+
+section{
+    margin-bottom: 40px;
+  flex: 1; 
+}
+
+h1{
+    font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333; 
+}
+
+.CardContainer{
+    display: flex;
+  gap: 20px;
+}
+
+.Card{
+    background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  flex: 1;
+  max-width: 250px;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.CardTitle{
+    font-size: 18px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.CardContent{
+    font-size: 16px;
+  color: #555555;
+}
+
+.AddButton{
+  padding: 10px 20px;
+  height: 50px;
+  width: 190px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .sidebar .MuiTypography-root {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .MuiList-root .MuiListItem-root {
+    padding: 10px 0;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f2f5;
+  }
+  
+  .header {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .learn-more-button {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .project-card-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .schedule-table {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .task-list {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  

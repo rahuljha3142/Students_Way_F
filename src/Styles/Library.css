@@ -1,0 +1,102 @@
+.LibraryContainer{
+    display: flex;
+}
+
+.Content{
+    flex: 1;
+    padding: 20px;
+    transition: all ease 0.8s;
+}
+
+
+.LibraryHeader {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.Title{
+    margin-bottom: 20px;
+}
+
+.AddBookForm{
+    margin-bottom: 20px;
+}
+
+.FormGroup{
+    margin-bottom: 10px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.BookList{
+    list-style: none;
+    padding: 0;
+}
+
+.BookItem{
+    margin-bottom: 10px;
+}
+
+.BookTitle{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.BookAuthor{
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #666;
+  
+}
+
+.ActionButton{
+    margin-left: 10px;
+    padding: 4px 8px;
+    font-size: 14px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #218838;
+    }
+}
+
+.BorrowButton {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+  
+.BorrowButton:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,68 @@
+.AttendanceContainer{
+    display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+.Content{
+    flex: 1;
+    transition: all ease 0.8s;
+}
+
+.AttendanceContent{
+    padding: 20px;
+}
+
+.AttendanceHeader{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.AttendanceList{
+    list-style: none;
+    padding: 0;
+}
+
+.AttendanceItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.AttendanceDate {
+    font-size: 18px;
+}
+
+.AttendanceStatus {
+    font-size: 18px;
+}
+
+.AttendanceStatus.Present {
+    color: green;
+}
+  
+.AttendanceStatus.Absent {
+    color: red;
+}
+
+.StudentName{
+    margin-right: 10px;
+}
+
+
+
+button{
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+}

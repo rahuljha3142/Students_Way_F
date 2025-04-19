@@ -1,0 +1,82 @@
+.ExamContainer{
+    display: flex;
+}
+
+.SidebarContainer{
+    flex: 0 0 250px;
+}
+
+.Content{
+    flex: 1;
+    padding: 20px;
+    transition: all ease 0.8s;
+}
+
+.ExamContent {
+    max-width: 800px;
+    margin: auto;
+  }
+
+.ExamHeader{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ExamForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.FormLabel{
+    margin-bottom: 10px;
+}
+
+.FormInput{
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.AddButton{
+    padding: 10px 20px;
+    width: auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ExamResultsContainer{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ExamResultItem {
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+.ExamSubject{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.ExamResult{
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.ExamChartContainer{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}

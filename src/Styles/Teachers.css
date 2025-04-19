@@ -1,0 +1,63 @@
+.TeachersContainer{
+    display: flex;
+    /* padding-left: 240px; */
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
+
+.Content{
+    flex: 1;
+    transition: all ease 0.8s;
+}
+
+.TeachersContent{
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.TeachersHeader{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.TeacherList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.TeacherItem{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.AddTeacherForm{
+    margin-bottom: 20px;
+}
+
+.AddTeacherInput{
+    padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.AddTeacherButton{
+    padding: 8px 16px;
+    width: auto;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

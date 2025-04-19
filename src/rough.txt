@@ -1,0 +1,83 @@
+import { useState } from 'react'
+import { NavLink } from 'react-router-dom';
+import { BsGraphUp, BsPeople, BsPerson, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear, BsChatDots, BsCalendarEvent } from 'react-icons/bs';
+import "../../Styles/Sidebar.css";
+
+
+const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    
+      <div className="SidebarContainer" style={{ width: isOpen ? '250px' : '80px' }}>
+        <div className="SidebarHeader">
+          <img className='Logo' src="../../assets/bg1.png" alt="logo" />
+        </div>
+        <ul className="SidebarNav">
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsGraphUp /></div>
+            <NavLink className="StyledLink" to="/admin/dashboard">Dashboard</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsPeople /></div>
+            <NavLink className="StyledLink" to="/admin/classes">Classes</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsPeople /></div>
+            <NavLink className="StyledLink" to="/admin/students">Students</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsPerson /></div>
+            <NavLink className="StyledLink" to="/admin/teachers">Teachers</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsFileText /></div>
+            <NavLink className="StyledLink" to="/admin/assignments">Assignments</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsBook /></div>
+            <NavLink className="StyledLink" to="/admin/exams">Exams</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsGraphDown /></div>
+            <NavLink className="StyledLink" to="/admin/performance">Performance</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsCalendar /></div>
+            <NavLink className="StyledLink" to="/admin/attendance">Attendance</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsBook /></div>
+            <NavLink className="StyledLink" to="/admin/library">Library</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsChatDots /></div>
+            <NavLink className="StyledLink" to="/admin/communication">Announcement</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsCalendarEvent /></div>
+            <NavLink className="StyledLink" to="/admin/events">Events & Calendar</NavLink>
+          </li>
+          <li className="SidebarNavItem">
+            <div className="SidebarIcon"><BsGear /></div>
+            <NavLink className="StyledLink" to="/admin/settings">Settings & Profile</NavLink>
+          </li>
+        </ul>
+        <div className="ToggleButton" onClick={toggleSidebar}>
+          {isOpen ? (
+            <span className="ToggleIcon">▲</span>
+          ) : (
+            <span className="ToggleIcon">▼</span>
+          )}
+        </div>
+      </div>
+    
+  )
+}
+
+export default Sidebar
+  

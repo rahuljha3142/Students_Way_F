@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.container{
+    max-width: 140rem;
+    /* padding: 4.2rem 2.4rem; */
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    gap: 3.2rem;
+}
+
+.Navbar{
+    font-family: 'Ubuntu', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #6BD4E7;
+    color: black;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+.Logo{
+    color: #024481;
+    height: auto;
+
+  
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #024481;
+  margin-bottom: 1.5rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.NavigationLinks{
+    display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
+}
+
+
+.HomeLink{
+    margin-right: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.ButtonsContainer{
+    display: flex;
+  align-items: center;
+  margin-right: 35px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+}
+
+.LoginButton{
+    background-color: orange;
+    width: auto;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+
+  @media screen and (max-width: 768px) {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+.GuestButton{
+    color: white;
+    width: auto;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid orange;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: orange;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

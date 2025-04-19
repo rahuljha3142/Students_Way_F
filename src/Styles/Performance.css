@@ -1,0 +1,28 @@
+.PerformanceContainer{
+    display: flex;
+}
+
+.Content{
+    flex: 1;
+    transition: all ease 0.8s;
+}
+
+.PerformanceContent{
+    padding: 20px;
+}
+
+.PerformanceHeader{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.SchoolPerformance{
+    margin-bottom: 20px;
+}
+
+.PerformanceInfo{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}

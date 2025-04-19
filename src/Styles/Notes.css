@@ -1,0 +1,101 @@
+.NotesContainer {
+    display: flex;
+  }
+  
+  .Content {
+    flex: 1;
+    padding: 20px;
+    transition: all ease 0.8s;
+  }
+  
+  .NotesContent {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .NotesHeader {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .AddNoteInput {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .AddNoteInput[type="text"] {
+    font-size: 1rem;
+  }
+  
+  textarea.AddNoteInput {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .AddNoteButton, .EditButton, .DeleteButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .AddNoteButton:hover, .EditButton:hover, .DeleteButton:hover {
+    background-color: #45a049;
+  }
+  
+  .EditButton {
+    background-color: #FFA500;
+  }
+  
+  .EditButton:hover {
+    background-color: #FF8C00;
+  }
+  
+  .DeleteButton {
+    background-color: #f44336;
+  }
+  
+  .DeleteButton:hover {
+    background-color: #c62828;
+  }
+  
+  .NoteList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .NoteItem {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .NoteItem span {
+    font-size: 1rem;
+  }
+  
+  .NoteItem .EditButton, .NoteItem .DeleteButton {
+    margin-left: 10px;
+  }
+  
+  .CancelButton {
+    background-color: #ccc;
+  }
+  
+  .CancelButton:hover {
+    background-color: #bbb;
+  }
+  

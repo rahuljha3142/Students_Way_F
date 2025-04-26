@@ -1,69 +1,74 @@
-// import { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear, BsChatDots } from 'react-icons/bs';
 import "../../Styles/Sidebar.css";
-import bg1 from "../../assets/parent.png"
-
-import PropTypes from 'prop-types'
-
-
-
-
+import bg1 from "../../assets/parent.png";
+import PropTypes from 'prop-types';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-
   return (
-    
-      <div className="SidebarContainer" style={{ width: isOpen ? '250px' : '55px' }}>
-        <div className="SidebarHeader">
-          <img className='Logo' src={bg1} alt="logo" />
-        </div>
-        <ul className="SidebarNav">
+    <div className="SidebarContainer" style={{ width: isOpen ? '250px' : '46px' }}>
+      <div className="SidebarHeader">
+        <img className="Logo" src={bg1} alt="logo" />
+      </div>
+      <ul className="SidebarNav">
+        <li>
           <NavLink className="SidebarNavItem" to="/parent/dashboard">
-            <NavLink className="SidebarIcon" to="/parent/dashboard"><BsGraphUp /></NavLink>
-            <NavLink className="StyledLink" to="/parent/dashboard">Dashboard</NavLink>
+            <div className="SidebarIcon"><BsGraphUp /></div>
+            <span className="SidebarLabel">Dashboard</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/parent/assignments">
             <div className="SidebarIcon"><BsFileText /></div>
-            <NavLink className="StyledLink" to="/parent/assignments">Assignments</NavLink>
+            <span className="SidebarLabel">Assignments</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/parent/exams">
             <div className="SidebarIcon"><BsBook /></div>
-            <NavLink className="StyledLink" to="/parent/exams">Exams</NavLink>
+            <span className="SidebarLabel">Exams</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/parent/performance">
             <div className="SidebarIcon"><BsGraphDown /></div>
-            <NavLink className="StyledLink" to="/parent/performance">Performance</NavLink>
+            <span className="SidebarLabel">Performance</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/parent/attendance">
             <div className="SidebarIcon"><BsCalendar /></div>
-            <NavLink className="StyledLink" to="/parent/attendance">Attendance</NavLink>
+            <span className="SidebarLabel">Attendance</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/parent/communication">
             <div className="SidebarIcon"><BsChatDots /></div>
-            <NavLink className="StyledLink" to="/parent/communication">Announcement</NavLink>
+            <span className="SidebarLabel">Announcement</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/parent/settings">
             <div className="SidebarIcon"><BsGear /></div>
-            <NavLink className="StyledLink" to="/parent/settings">Settings & Profile</NavLink>
+            <span className="SidebarLabel">Settings & Profile</span>
           </NavLink>
-        </ul>
-        <div className="ToggleButton" onClick={toggleSidebar}>
-          <span 
-            className="ToggleIcon" 
-            style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-              ▲ 
-          </span>
-        </div>
+        </li>
+      </ul>
+      <div className="ToggleButton" onClick={toggleSidebar}>
+        <span
+          className="ToggleIcon"
+          style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+        >
+          ▲
+        </span>
       </div>
-    
-  )
-}
-
+    </div>
+  );
+};
 
 Sidebar.propTypes = {
-  isOpen : PropTypes.bool.isRequired,
-  toggleSidebar : PropTypes.func.isRequired,
-}
+  isOpen: PropTypes.bool.isRequired,
+  toggleSidebar: PropTypes.func.isRequired,
+};
 
-export default Sidebar
+export default Sidebar;

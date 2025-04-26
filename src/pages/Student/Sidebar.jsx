@@ -1,87 +1,102 @@
-// import { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import { BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear, BsChatDots,BsListTask, BsFillQuestionOctagonFill } from 'react-icons/bs';
+import {
+  BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear,
+  BsChatDots, BsListTask, BsFillQuestionOctagonFill
+} from 'react-icons/bs';
 import { CgNotes } from "react-icons/cg";
 import "../../Styles/Sidebar.css";
-import bg1 from "../../assets/student.png"
-
-import PropTypes from 'prop-types'
-
-
-
-
+import bg1 from "../../assets/student.png";
+import PropTypes from 'prop-types';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
-  
   return (
-    
-      <div className="SidebarContainer" style={{ width: isOpen ? '250px' : '55px' }}>
-        <div className="SidebarHeader">
-          <img className='Logo' src={bg1} alt="logo" />
-        </div>
-        <ul className="SidebarNav" >
+    <div className="SidebarContainer" style={{ width: isOpen ? '250px' : '46px' }}>
+      <div className="SidebarHeader">
+        <img className="Logo" src={bg1} alt="logo" />
+      </div>
+      <ul className="SidebarNav">
+        <li>
           <NavLink className="SidebarNavItem" to="/student/dashboard">
-            <NavLink className="SidebarIcon" to="/student/dashboard"><BsGraphUp /></NavLink>
-            <NavLink className="StyledLink" to="/student/dashboard">Dashboard</NavLink>
+            <div className="SidebarIcon"><BsGraphUp /></div>
+            <span className="SidebarLabel">Dashboard</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/assignments">
             <div className="SidebarIcon"><BsFileText /></div>
-            <NavLink className="StyledLink" to="/student/assignments">Assignments</NavLink>
+            <span className="SidebarLabel">Assignments</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/tasks">
             <div className="SidebarIcon"><BsListTask /></div>
-            <NavLink className="StyledLink" to="/student/tasks">Task Scheduler</NavLink>
+            <span className="SidebarLabel">Task Scheduler</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/notes">
             <div className="SidebarIcon"><CgNotes /></div>
-            <NavLink className="StyledLink" to="/student/notes">Notes</NavLink>
+            <span className="SidebarLabel">Notes</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/mcq">
             <div className="SidebarIcon"><BsFillQuestionOctagonFill /></div>
-            <NavLink className="StyledLink" to="/student/mcq">MCQ Generator</NavLink>
+            <span className="SidebarLabel">MCQ Generator</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/exams">
             <div className="SidebarIcon"><BsBook /></div>
-            <NavLink className="StyledLink" to="/student/exams">Exams</NavLink>
+            <span className="SidebarLabel">Exams</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/performance">
             <div className="SidebarIcon"><BsGraphDown /></div>
-            <NavLink className="StyledLink" to="/student/performance">Performance</NavLink>
+            <span className="SidebarLabel">Performance</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/attendance">
             <div className="SidebarIcon"><BsCalendar /></div>
-            <NavLink className="StyledLink" to="/student/attendance">Attendance</NavLink>
+            <span className="SidebarLabel">Attendance</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/library">
             <div className="SidebarIcon"><BsBook /></div>
-            <NavLink className="StyledLink" to="/student/library">Library</NavLink>
+            <span className="SidebarLabel">Library</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/communication">
             <div className="SidebarIcon"><BsChatDots /></div>
-            <NavLink className="StyledLink" to="/student/communication">Announcement</NavLink>
+            <span className="SidebarLabel">Announcement</span>
           </NavLink>
+        </li>
+        <li>
           <NavLink className="SidebarNavItem" to="/student/settings">
             <div className="SidebarIcon"><BsGear /></div>
-            <NavLink className="StyledLink" to="/student/settings">Profile</NavLink>
+            <span className="SidebarLabel">Profile</span>
           </NavLink>
-        </ul>
-        <div className="ToggleButton" onClick={toggleSidebar}>
-          <span 
-            className="ToggleIcon" 
-            style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-              ▲ 
-          </span>
-        </div>
+        </li>
+      </ul>
+      <div className="ToggleButton" onClick={toggleSidebar}>
+        <span
+          className="ToggleIcon"
+          style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+        >
+          ▲
+        </span>
       </div>
-    
-  )
-}
-
+    </div>
+  );
+};
 
 Sidebar.propTypes = {
-  isOpen : PropTypes.bool.isRequired,
-  toggleSidebar : PropTypes.func.isRequired,
-}
+  isOpen: PropTypes.bool.isRequired,
+  toggleSidebar: PropTypes.func.isRequired,
+};
 
-export default Sidebar
-
+export default Sidebar;

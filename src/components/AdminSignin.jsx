@@ -3,15 +3,16 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import "../Styles/AdminSignin.css";
 import { Navbar } from './Navbar';
 
-const URL = "https://students-way-b.onrender.com/api/auth/login";
+const URL = "http://localhost:5000/api/auth/login";
 
 export default function AdminSignin() {
 
     let [formData, setFormData] = useState({
-        // fullName: "",
         username: "",
         password: ""
     });
+
+    const [showPassword, setShowPassword] = useState(false); // 👁️ toggle
 
     const navigate = useNavigate();
 
@@ -45,12 +46,10 @@ export default function AdminSignin() {
           } catch (error) {
             console.log(error);
           }
+    };
 
-        // setFormData({
-        //     // fullName: "",
-        //     username: "",
-        //     password: "",
-        // });
+    const togglePasswordVisibility = () => {
+      setShowPassword((prev) => !prev);
     };
 
     return (
@@ -58,18 +57,6 @@ export default function AdminSignin() {
     <Navbar />
             <h1>Admin Login</h1>
             <form className="FormContainer" onSubmit={handleSubmit}>
-                {/* <label htmlFor="fullName">Enter your Name</label> */}
-                {/* <input 
-                    className="InputField"
-                    placeholder="enter full name" 
-                    type="text" 
-                    value={formData.fullName} 
-                    onChange={handleInputChange}
-                    id="fullName"
-                    name="fullName"
-                /> */}
-                {/* <br /><br /> */}
-                {/* <label htmlFor="username">Username</label> */}
                 <input  
                     className="InputField"
                     placeholder="enter username" 
@@ -79,19 +66,22 @@ export default function AdminSignin() {
                     id="username"
                     name="username"
                 />
-                {/* <br /><br /> */}
-                {/* <label htmlFor="password">Password</label> */}
+
+                <div className="PasswordFieldWrapper">
                 <input  
-                    className="InputField"
+                    className="InputField passwordInput"
                     placeholder="enter password" 
-                    type="password" 
+                    type={showPassword ? "text" : "password"}
                     value={formData.password} 
                     onChange={handleInputChange}
                     id="password"
                     name="password"
                 />
-                {/* <br /><br /><br /> */}
-                <NavLink className="button" to="/admin/dashboard">Submit</NavLink>
+                <span className="TogglePassword" onClick={togglePasswordVisibility}>
+                  {showPassword ? "🙈" : "👁️"}
+                </span>
+                </div>
+                <NavLink className="SubmitButton" to="/admin/dashboard">Submit</NavLink>
             </form>
         </div>
     );

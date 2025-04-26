@@ -1,85 +1,189 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sidebar Container */
 .SidebarContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #2c3e50;
-    color: white;
-    overflow-y: auto;
-    padding-top: 60px;
-    transition: width 0.8s ease;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #2c3e50;
+  color: white;
+  overflow-y: auto;
+  padding-top: 60px;
+  transition: width 0.8s ease;
+  z-index: 100;
+}
+
+/* Sidebar Header */
+.SidebarHeader {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Logo */
+.Logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Sidebar Navigation */
+.SidebarNav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.SidebarNav li {
+  width: 100%;
+  margin-bottom: 0px; /* Fixed margin to remove overlapping */
+}
+
+/* Sidebar Nav Items */
+.SidebarNavItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.SidebarNavItem:hover {
+  background-color: #34495e;
+}
+
+/* Sidebar Icons */
+.SidebarIcon {
+  margin-right: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sidebar Labels */
+.SidebarLabel {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+/* Toggle Button */
+.ToggleButton {
+  position: absolute;
+  top: 20px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: #34495e;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.ToggleIcon {
+  color: white;
+  font-size: 20px;
+  transition: transform 0.8s ease;
+}
+
+/* Main Content (if needed) */
+.main-container {
+  margin-left: 250px; /* to push content aside */
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Image container */
+.image-container {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text section */
+.text-section {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+  padding: 10px 15px;
+  word-wrap: break-word;
+}
+
+/* Button section */
+.button-section {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-section button:hover {
+  background-color: #357ABD;
+}
+
+/* Responsive sidebar + main content */
+@media (max-width: 768px) {
+  .SidebarContainer {
+    width: 200px;
   }
-  
-  .SidebarHeader {
-    padding: 10px;
-    text-align: center;
+
+  .main-container {
+    margin-left: 200px;
+    padding: 15px;
   }
-  
-  .Logo {
-    width: 50px;
-    height: auto;
-  }
-  
-  .SidebarNav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .SidebarNav li {
-    width: 100%;
-    margin-bottom: -40px;
-  }
-  
+
   .SidebarNavItem {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .text-section {
+    font-size: 1rem;
+  }
+
+  .button-section button {
     padding: 8px 16px;
-    font-size: 18px;
-    border-bottom: none;
-    color: white;
-    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
   }
-  
-  .SidebarNavItem:hover {
-    background-color: #34495e;
-  }
-  
-  .SidebarIcon {
-    margin-right: 10px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .SidebarLabel {
-    white-space: nowrap;
-    color: white;
-  }
-  
-  .ToggleButton {
-    position: absolute;
-    top: 20px;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    background-color: #34495e;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .ToggleIcon {
-    color: white;
-    font-size: 20px;
-    transition: transform 0.8s ease;
-  }
-  
+}

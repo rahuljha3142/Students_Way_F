@@ -81,7 +81,7 @@ export default function AdminSignin() {
                   {showPassword ? "🙈" : "👁️"}
                 </span>
                 </div>
-                <NavLink className="SubmitButton" to="/admin/dashboard">Submit</NavLink>
+                <NavLink className="SubmitButton">Submit</NavLink>
             </form>
         </div>
     );

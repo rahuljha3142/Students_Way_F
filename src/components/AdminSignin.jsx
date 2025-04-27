@@ -3,7 +3,9 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import "../Styles/AdminSignin.css";
 import { Navbar } from './Navbar';
 
-const URL = "https://students-way-b.onrender.com/api/auth/login";
+// const URL = "https://students-way-b.onrender.com/api/auth/login";
+const URL = import.meta.env.VITE_LOGIN_API;
+
 
 export default function AdminSignin() {
 

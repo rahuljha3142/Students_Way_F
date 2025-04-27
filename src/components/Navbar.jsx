@@ -38,14 +38,14 @@ export const Navbar = () => {
             <li>
               <NavLink className="HomeLink" to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
             </li>
-            <li class="nav-item dropdown">
-              <button class="dropdown-toggle">Login</button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Admin</a></li>
-                <li><a class="dropdown-item" href="#">Teacher</a></li>
-                <li><div class="dropdown-divider"></div></li>
-                <li><a class="dropdown-item" href="#">Parent</a></li>
-                <li><a class="dropdown-item" href="#">Student</a></li>
+            <li className="nav-item dropdown">
+              <button className="dropdown-toggle">Login</button>
+              <ul className="dropdown-menu">
+                <li><a className="dropdown-item" href="#">Admin</a></li>
+                <li><a className="dropdown-item" href="#">Teacher</a></li>
+                <li><div className="dropdown-divider"></div></li>
+                <li><a className="dropdown-item" href="#">Parent</a></li>
+                <li><a className="dropdown-item" href="#">Student</a></li>
               </ul>
             </li>
           </ul>

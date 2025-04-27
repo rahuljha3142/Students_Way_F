@@ -41,11 +41,11 @@ export const Navbar = () => {
             <li className="nav-item dropdown">
               <button className="dropdown-toggle">Login</button>
               <ul className="dropdown-menu">
-                <li><NavLink className="dropdown-item" to="/admin-signIn">Admin onClick={() => setMenuOpen(false)}</NavLink></li>
-                <li><NavLink className="dropdown-item" to="/teacher-signIn">Teacher onClick={() => setMenuOpen(false)}</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/admin-signIn" onClick={() => setMenuOpen(false)}>Admin</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/teacher-signIn" onClick={() => setMenuOpen(false)}>Teacher</NavLink></li>
                 <li><div className="dropdown-divider"></div></li>
-                <li><NavLink className="dropdown-item" to="/parent-signIn">Parent onClick={() => setMenuOpen(false)}</NavLink></li>
-                <li><NavLink className="dropdown-item" to="/student-signIn">Student onClick={() => setMenuOpen(false)}</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/parent-signIn" onClick={() => setMenuOpen(false)}>Parent</NavLink></li>
+                <li><NavLink className="dropdown-item" to="/student-signIn" onClick={() => setMenuOpen(false)}>Student</NavLink></li>
               </ul>
             </li>
           </ul>

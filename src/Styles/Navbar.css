@@ -163,9 +163,10 @@
     border-radius: 5px;
   }
 
-  /* Dropdown Menu (hidden by default) */
+  /* Dropdown Menu (initially hidden properly) */
   .dropdown-menu {
-    display: none;
+    display: none; /* important */
+    flex-direction: column; /* stacking vertically */
     position: absolute;
     background-color: white;
     min-width: 160px;
@@ -173,15 +174,17 @@
     border-radius: 5px;
     margin-top: 5px;
     z-index: 1;
+    padding: 0;
+    list-style: none;
   }
 
-  /* Show menu on hover */
+  /* When hovering dropdown, show the menu */
   .dropdown:hover .dropdown-menu {
-    display: block;
+    display: flex;
   }
 
-  /* Menu items */
-  .dropdown-menu a {
+  /* Dropdown items */
+  .dropdown-item {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -189,11 +192,11 @@
     border-bottom: 1px solid #eee;
   }
 
-  .dropdown-menu a:hover {
+  .dropdown-item:hover {
     background-color: #f1f1f1;
   }
 
-  /* Divider */
+  /* Divider style */
   .dropdown-divider {
     height: 1px;
     background-color: #ddd;

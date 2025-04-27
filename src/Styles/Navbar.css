@@ -166,16 +166,6 @@
   /* Dropdown Menu (initially hidden properly) */
   .dropdown-menu {
     display: none; /* important */
-    flex-direction: column; /* stacking vertically */
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    margin-top: 5px;
-    z-index: 1;
-    padding: 0;
-    list-style: none;
   }
 
   /* When hovering dropdown, show the menu */

@@ -48,7 +48,7 @@ const Dashboard = () => {
     <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
 
       
-      <main className="main-content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <main className="main-content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
         <div className="stats-section">
           <div className="stat-box">
             <FontAwesomeIcon icon={faUser} className="icon" />

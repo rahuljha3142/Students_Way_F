@@ -32,7 +32,7 @@ const Assignments = () => {
   return (
     <div className='AssignmentsContainer'>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
         <div className="AssignmentsContent">
           <h2 className="AssignmentsHeader">Assignments</h2>
           <form onSubmit={addNewAssignment} className="AddAssignmentForm">

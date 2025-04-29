@@ -63,7 +63,8 @@
 
 /* Sidebar Icons */
 .SidebarIcon {
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-left: 5px;
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -80,7 +81,7 @@
 .ToggleButton {
   position: absolute;
   top: 20px;
-  right: -15px;
+  right: 15px;
   width: 30px;
   height: 30px;
   background-color: #34495e;

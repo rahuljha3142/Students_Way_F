@@ -63,7 +63,7 @@ const EventCalendar = () => {
   return (
     <div className="EventCalendarContainer">
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
         <h2 className="EventCalendarHeader">Event Calendar</h2>
         <div>Current Time: {currentTime}</div>
         <form onSubmit={addNewEvent} className="EventForm">

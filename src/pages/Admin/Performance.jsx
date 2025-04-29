@@ -26,7 +26,7 @@ const Performance = () => {
   return (
     <div className='PerformanceContainer'>
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-        <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+        <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
             <div className="PerformanceContent">
               <h2 className="PerformanceHeader">School Performance</h2>
               <div className="SchoolPerformance">

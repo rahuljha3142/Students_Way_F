@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <div className="SidebarContainer" style={{ width: isOpen ? '250px' : '65px' }}>
+    <div className="SidebarContainer" style={{ width: isOpen ? '220px' : '60px' }}>
       <div className="SidebarHeader">
         <img className='Logo' src={bg1} alt="logo" />
       </div>

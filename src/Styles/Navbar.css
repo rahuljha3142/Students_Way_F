@@ -16,7 +16,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 30px;
+    padding: 15px 30px;
+    height: 80px;
     background-color: #6BD4E7;
     color: black;
     z-index: 1000;
@@ -72,6 +73,8 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    margin-top: 5px;
+    vertical-align: middle;
 }
 
 .HomeLink:hover {
@@ -84,33 +87,7 @@
     gap: 10px;
 }
 
-.LoginButton {
-    background-color: orange;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
-.GuestButton {
-    color: orange;
-    background-color: transparent;
-    border: 2px solid orange;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.GuestButton:hover {
-    background-color: orange;
-    color: white;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -148,17 +125,13 @@
 
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
   /* Main nav-item */
   .nav-item {
     position: relative;
     list-style: none;
     display: inline-block;
+    margin-top: -18px;
   }
 
   /* Dropdown button */
@@ -221,3 +194,5 @@
     opacity: 1;
     visibility: visible;
   }
+
+  

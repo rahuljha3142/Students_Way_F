@@ -38,8 +38,8 @@ export const Navbar = () => {
             <li>
               <NavLink className="HomeLink" to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
             </li>
-            <li className="nav-item dropdown">
-              <button className="dropdown-toggle">Login</button>
+            <li className="nav-item ">
+              <button className="HomeLink">Login</button>
               <ul className="dropdown-menu">
                 <li><NavLink className="dropdown-item" to="/admin-signIn" onClick={() => setMenuOpen(false)}>Admin</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/teacher-signIn" onClick={() => setMenuOpen(false)}>Teacher</NavLink></li>
@@ -48,8 +48,8 @@ export const Navbar = () => {
                 <li><NavLink className="dropdown-item" to="/student-signIn" onClick={() => setMenuOpen(false)}>Student</NavLink></li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
-              <button className="dropdown-toggle">Register</button>
+            <li className="nav-item">
+              <button className=" HomeLink">Register</button>
               <ul className="dropdown-menu">
                 <li><NavLink className="dropdown-item" to="/admin-register" onClick={() => setMenuOpen(false)}>Admin</NavLink></li>
                 <li><NavLink className="dropdown-item" to="/teacher-signIn" onClick={() => setMenuOpen(false)}>Teacher</NavLink></li>

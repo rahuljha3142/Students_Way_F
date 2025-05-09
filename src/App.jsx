@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./components/Home"
 import { Contact } from "./components/Contact"
 import ChooseUser from "./components/ChooseUser"
+import { Error } from "./components/Error"
 // import { Navbar } from "./components/Navbar"
 
 // Sign in 
@@ -72,6 +73,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/navbar" element={<Navbar />} /> */}
           <Route path="/choose-user" element={<ChooseUser />} />
+          <Route path="*" element={<Error />} />
           
           {/* All the sign-in pages/routes */}
 

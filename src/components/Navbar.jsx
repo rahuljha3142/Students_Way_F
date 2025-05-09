@@ -33,7 +33,7 @@ export const Navbar = () => {
               <NavLink className="HomeLink" to="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
             </li>
             <li>
-              <NavLink className="HomeLink" to="#" onClick={() => setMenuOpen(false)}>About</NavLink>
+              <NavLink className="HomeLink" to="about" onClick={() => setMenuOpen(false)}>About</NavLink>
             </li>
             <li>
               <NavLink className="HomeLink" to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>

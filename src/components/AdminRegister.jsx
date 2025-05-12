@@ -11,7 +11,8 @@ export default function AdminRegister() {
         fullName: "",
         username: "",
         email: "",
-        password: ""
+        password: "",
+        role: "admin", 
     });
 
     const navigate = useNavigate();

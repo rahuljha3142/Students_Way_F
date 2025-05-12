@@ -10,7 +10,7 @@ const URL = "https://students-way-b.onrender.com/api/auth/login";
 export default function AdminSignin() {
 
     let [formData, setFormData] = useState({
-        username: "",
+        email: "",
         password: ""
     });
 
@@ -39,7 +39,7 @@ export default function AdminSignin() {
       
             if(response.ok) {
               alert("login successfull")
-              setFormData({ username: "", password: "" });
+              setFormData({ email: "", password: "" });
               navigate("/admin/dashboard");
             } else {
               alert("invalid credentials")
@@ -61,12 +61,12 @@ export default function AdminSignin() {
             <form className="FormContainer" onSubmit={handleSubmit}>
                 <input  
                     className="InputField"
-                    placeholder="enter username" 
+                    placeholder="enter email" 
                     type="text" 
-                    value={formData.username} 
+                    value={formData.email} 
                     onChange={handleInputChange}
-                    id="username"
-                    name="username"
+                    id="email"
+                    name="email"
                 />
 
                 <div className="PasswordFieldWrapper">

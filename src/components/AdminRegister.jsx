@@ -105,18 +105,17 @@ export default function AdminRegister() {
                     id="password"
                     name="password"
                 />
-                {/* <br /> */} 
-
-                {/* <div className="CheckboxGroup">
-                    <div className="Checkbox">
-                        <input type="checkbox" name="rememberMe" id="rememberMe" />
-                    </div>
-                    <div className="CheckBoxLabel">
-                        <label htmlFor="rememberMe">Remember Me</label>
-                    </div>
-                </div> */}
-                
-                {/* <br /><br /> */}
+                <select
+                    className="InputField"
+                    name="role"
+                    value={formData.role}
+                    onChange={handleInputChange}
+                >
+                    <option value="admin">Admin</option>
+                    <option value="parent">Parent</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
                 <button>REGISTER</button>
                 <br />
 

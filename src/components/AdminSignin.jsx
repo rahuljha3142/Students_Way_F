@@ -33,6 +33,7 @@ export default function AdminSignin() {
               headers: {
                 "Content-Type": "application/json",
               },
+              credentials: 'include',
               body: JSON.stringify(formData),
             });
             console.log("login form", response);

@@ -62,7 +62,7 @@ export default function AdminSignin() {
                 <input  
                     className="InputField"
                     placeholder="enter email" 
-                    type="text" 
+                    type="email" 
                     value={formData.email} 
                     onChange={handleInputChange}
                     id="email"

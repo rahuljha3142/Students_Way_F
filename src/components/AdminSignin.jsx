@@ -24,35 +24,64 @@ export default function AdminSignin() {
         });
     };
 
-    let handleSubmit = async (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(formData);
         try {
             const response = await fetch(URL, {
-            method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              credentials: 'include',
-              body: JSON.stringify(formData),
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: "include",
+                body: JSON.stringify(formData),
             });
-            console.log("login form", response);
-      
-            if(response.ok) {
-              alert("login successfull")
-              setFormData({ username: "", password: "" });
-              navigate("/admin/dashboard");
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("Login successful!");
+
+                // redirect based on role
+                if (data.token) {
+                    const tokenPayload = parseJwt(data.token);
+                    const role = tokenPayload?.role || "student";
+
+                    switch(role) {
+                        case "admin":
+                            navigate("/admin/dashboard");
+                            break;
+                        case "teacher":
+                            navigate("/teacher/dashboard");
+                            break;
+                        case "parent":
+                            navigate("/parent/dashboard");
+                            break;
+                        case "student":
+                            navigate("/student/dashboard");
+                            break;
+                        default:
+                            navigate("/");
+                    }
+                }
             } else {
-              alert("invalid credentials")
-              console.log("invalid credentials")
+                alert(data.message || "Invalid credentials");
             }
-          } catch (error) {
-            console.log(error);
-          }
+        } catch (error) {
+            console.error("Login error:", error);
+            alert("Something went wrong. Please try again.");
+        }
     };
 
     const togglePasswordVisibility = () => {
       setShowPassword((prev) => !prev);
+    };
+
+     const parseJwt = (token) => {
+        try {
+            return JSON.parse(atob(token.split('.')[1]));
+        } catch (e) {
+            return null;
+        }
     };
 
     return (
@@ -73,7 +102,7 @@ export default function AdminSignin() {
                 <div className="PasswordFieldWrapper">
                 <input  
                     className="InputField passwordInput"
-                    placeholder="enter password" 
+                    placeholder="Enter Password" 
                     type={showPassword ? "text" : "password"}
                     value={formData.password} 
                     onChange={handleInputChange}
@@ -84,7 +113,11 @@ export default function AdminSignin() {
                   {showPassword ? "🙈" : "👁️"}
                 </span>
                 </div>
-                <button className="SubmitButton">Submit</button>
+                <button className="SubmitButton">LOGIN</button>
+                <br />
+                
+                <span>Don&apos;t have an account?</span>
+                <NavLink to="/admin-register">Register</NavLink>
             </form>
         </div>
     );

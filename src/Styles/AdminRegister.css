@@ -58,3 +58,30 @@ button{
       font-size: 16px;
     }
 }
+
+.PasswordFieldWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.passwordInput {
+  padding-right: 50px; /* Space for eye icon */
+}
+
+.TogglePassword {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  .TogglePassword {
+    font-size: 18px;
+    right: 10px;
+  }
+}

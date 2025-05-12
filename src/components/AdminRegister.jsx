@@ -12,8 +12,10 @@ export default function AdminRegister() {
         username: "",
         email: "",
         password: "",
-        role: "admin", 
+        role: "none", 
     });
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
 
@@ -26,6 +28,11 @@ export default function AdminRegister() {
     let handleSubmit = async (event) => {
         event.preventDefault();
         console.log(formData);
+
+         if (formData.role === "none") {
+            alert("Please select a valid role before proceeding.");
+            return;
+        }
         
     try {
         const response = await fetch(URL, {
@@ -38,20 +45,19 @@ export default function AdminRegister() {
         console.log("registration form", response);
   
         if(response.ok) {
-            setFormData({ fullName: "", username: "", email: "", password: "" });
+            alert("Registration successful!");
+            setFormData({ fullName: "", username: "", email: "", password: "", role: "none", });
             navigate("/admin-signIn")
         }
       } catch (error) {
         console.error("Error", error);
+        alert("Registration failed. Please try again.");
       }
 
-        
-        // setFormData({
-        //     fullName: "",
-        //     username: "",
-        //     email: "",
-        //     password: "",
-        // });
+    };
+
+    const togglePasswordVisibility = () => {
+      setShowPassword((prev) => !prev);
     };
 
    
@@ -72,8 +78,6 @@ export default function AdminRegister() {
                     id="fullName"
                     name="fullName"
                 />
-                {/* <br /><br /> */}
-                {/* <label htmlFor="username">Username</label> */}
                 <input 
                     className="InputField"
                     placeholder="Create Your Username" 
@@ -83,8 +87,6 @@ export default function AdminRegister() {
                     id="username"
                     name="username"
                 />
-                {/* <br /><br /> */}
-                {/* <label htmlFor="email">Email</label> */}
                 <input 
                     className="InputField"
                     placeholder="Enter Your Email" 
@@ -94,23 +96,27 @@ export default function AdminRegister() {
                     id="email"
                     name="email"
                 />
-                {/* <br /><br /> */}
-                {/* <label htmlFor="password">Password</label> */}
+                <div className="PasswordFieldWrapper">
                 <input 
-                    className="InputField"
+                    className="InputField passwordInput"
                     placeholder="Enter Password" 
-                    type="password" 
+                    type={showPassword ? "text" : "password"}
                     value={formData.password} 
                     onChange={handleInputChange}
                     id="password"
                     name="password"
                 />
+                <span className="TogglePassword" onClick={togglePasswordVisibility}>
+                  {showPassword ? "🙈" : "👁️"}
+                </span>
+                </div>
                 <select
                     className="InputField"
                     name="role"
                     value={formData.role}
                     onChange={handleInputChange}
                 >
+                    <option value="none" disabled>Select Role</option>
                     <option value="admin">Admin</option>
                     <option value="parent">Parent</option>
                     <option value="teacher">Teacher</option>
@@ -120,8 +126,7 @@ export default function AdminRegister() {
                 <br />
 
                 <span>Already have an account?</span>
-                {/* <button onClick={handleClick}>Sign in</button> */}
-                <NavLink to="/admin-signIn">Sign in</NavLink>
+                <NavLink to="/admin-signIn">Login</NavLink>
             </form>
         </div>
         </>

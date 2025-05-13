@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, useNavigate } from 'react-router-dom'; 
 import "../Styles/AdminSignin.css";
 import { Navbar } from './Navbar';
+import { useAuth } from "../store/Auth";
 
 const URL = "https://students-way-b.onrender.com/api/auth/login";
 // const URL = import.meta.env.VITE_LOGIN_API;
@@ -17,6 +18,8 @@ export default function AdminSignin() {
     const [showPassword, setShowPassword] = useState(false); // 👁️ toggle
 
     const navigate = useNavigate();
+
+    const {storeTokenInLS} = useAuth();
 
     let handleInputChange = (event) => {
         setFormData( (currData) => {
@@ -39,6 +42,9 @@ export default function AdminSignin() {
             const data = await response.json();
 
             if (response.ok) {
+                console.log("response from server", data);
+                storeTokenInLS(data.token);
+
                 alert("Login successful!");
 
                 // redirect based on role

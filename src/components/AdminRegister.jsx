@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom"
 import "../Styles/AdminRegister.css";
 import { Navbar } from './Navbar';
+import { useAuth } from "../store/Auth";
 
 const URL = "https://students-way-b.onrender.com/api/auth/register";
 
@@ -18,6 +19,8 @@ export default function AdminRegister() {
     const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
+
+    const {storeTokenInLS} = useAuth();
 
     let handleInputChange = (event) => {
         setFormData( (currData) => {
@@ -46,6 +49,9 @@ export default function AdminRegister() {
         console.log("registration form", response);
   
         if(response.ok) {
+            const res_data = await response.json();
+            storeTokenInLS(res_data.token);
+            
             alert("Registration successful!");
             setFormData({ fullName: "", username: "", email: "", password: "", role: "none", });
             navigate("/admin-signIn")

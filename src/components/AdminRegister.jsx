@@ -43,7 +43,7 @@ export default function AdminRegister() {
           headers: {
             "Content-Type": "application/json",
           },
-          credentials: "include",
+        //   credentials: "include",
           body: JSON.stringify(formData),
         });
         console.log("registration form", response);

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import {
   BsGraphUp, BsPeople, BsPerson, BsFileText, BsBook,
-  BsGraphDown, BsCalendar, BsGear, BsChatDots, BsCalendarEvent
+  BsGraphDown, BsCalendar, BsGear, BsChatDots, BsCalendarEvent, BsBoxArrowLeft
 } from 'react-icons/bs';
 
 import "../../Styles/Sidebar.css";
@@ -85,6 +85,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <NavLink className="SidebarNavItem" to="/admin/settings">
             <div className="SidebarIcon"><BsGear /></div>
             <span className="SidebarLabel">Settings & Profile</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="SidebarNavItem" to="/logout">
+            <div className="SidebarIcon"><BsBoxArrowLeft /></div>
+            <span className="SidebarLabel">Logout</span>
           </NavLink>
         </li>
       </ul>

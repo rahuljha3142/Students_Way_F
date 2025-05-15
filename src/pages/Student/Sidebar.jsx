@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import {
-  BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear,
+  BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear, BsBoxArrowLeft,
   BsChatDots, BsListTask, BsFillQuestionOctagonFill
 } from 'react-icons/bs';
 import { CgNotes } from "react-icons/cg";
@@ -79,6 +79,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <NavLink className="SidebarNavItem" to="/student/settings">
             <div className="SidebarIcon"><BsGear /></div>
             <span className="SidebarLabel">Profile</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="SidebarNavItem" to="/logout">
+            <div className="SidebarIcon"><BsBoxArrowLeft /></div>
+            <span className="SidebarLabel">Logout</span>
           </NavLink>
         </li>
       </ul>

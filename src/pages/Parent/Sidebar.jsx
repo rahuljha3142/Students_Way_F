@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear, BsChatDots } from 'react-icons/bs';
+import { BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear, BsChatDots, BsBoxArrowLeft } from 'react-icons/bs';
 import "../../Styles/Sidebar.css";
 import bg1 from "../../assets/parent.png";
 import PropTypes from 'prop-types';
@@ -51,6 +51,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <NavLink className="SidebarNavItem" to="/parent/settings">
             <div className="SidebarIcon"><BsGear /></div>
             <span className="SidebarLabel">Settings & Profile</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="SidebarNavItem" to="/logout">
+            <div className="SidebarIcon"><BsBoxArrowLeft /></div>
+            <span className="SidebarLabel">Logout</span>
           </NavLink>
         </li>
       </ul>

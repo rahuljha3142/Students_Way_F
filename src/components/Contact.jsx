@@ -116,7 +116,7 @@ export const Contact = () => {
               </div>
 
               <div>
-                <button type="submit">submit</button>
+                <button className="SubmitButton" type="submit">submit</button>
               </div>
             </form>
           </section>

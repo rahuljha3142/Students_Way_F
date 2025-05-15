@@ -129,7 +129,7 @@ export default function AdminRegister() {
                     <option value="teacher">Teacher</option>
                     <option value="student">Student</option>
                 </select>
-                <button>REGISTER</button>
+                <button className="SubmitButton">REGISTER</button>
                 <br />
 
                 <span>Already have an account?</span>

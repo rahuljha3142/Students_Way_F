@@ -93,7 +93,7 @@ export default function AdminSignin() {
     return (
         <div className="AdminSignInContainer">
     <Navbar />
-            <h1>Admin Login</h1>
+            <h1>Login</h1>
             <form className="FormContainer" onSubmit={handleSubmit}>
                 <input  
                     className="InputField"

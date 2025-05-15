@@ -1,10 +1,9 @@
 .AdminRegisterContainer{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: #EEAECA;
+  align-items: center;background: #EEAECA;
   background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  height: 100vh;
+  height: 100vh; 
   padding-top: 100px;
 }
 
@@ -15,7 +14,7 @@ h1{
 }
 
 .FormContainer{
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
@@ -28,12 +27,30 @@ h1{
 }
 
 .InputField{
-    width: 100%;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.SubmitButton {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.SubmitButton:hover {
+  background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
 }
 
 
@@ -57,8 +74,10 @@ button{
     
     @media screen and (max-width: 768px) {
       font-size: 16px;
+      padding: 12px;
     }
 }
+
 
 .PasswordFieldWrapper {
   position: relative;

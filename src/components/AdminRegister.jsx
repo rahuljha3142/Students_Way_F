@@ -73,7 +73,7 @@ export default function AdminRegister() {
         <>
         <Navbar />
         <div className="AdminRegisterContainer">
-        <h1>Admin Register</h1>
+        <h1>Register</h1>
             <form className="FormContainer" onSubmit={handleSubmit}>
                 {/* <label htmlFor="fullName">Name</label> */}
                 <input 

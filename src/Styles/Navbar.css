@@ -81,7 +81,8 @@
 }
 
 .HomeLink:hover {
-    text-decoration: underline;
+    color: black;
+    background-image: linear-gradient(-20deg, #bdb2dd 0%, #ba6f6c 100%, #c8726e 100%);
 }
 
 /* Buttons */

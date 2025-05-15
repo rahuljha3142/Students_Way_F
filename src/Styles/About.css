@@ -9,7 +9,8 @@
 }
 
 body {
-    background: linear-gradient(45deg, #6BD4E7, #6FC3DF);
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     min-height: 100vh;
 }
 

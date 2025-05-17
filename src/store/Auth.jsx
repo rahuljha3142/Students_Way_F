@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 // eslint-disable-next-line react/prop-types
 export const AuthProvider = ({children}) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
 
     const storeTokenInLS = (serverToken) => {
         return localStorage.setItem("token", serverToken);

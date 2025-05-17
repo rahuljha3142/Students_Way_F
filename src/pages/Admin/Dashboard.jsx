@@ -38,7 +38,7 @@ const Dashboard = () => {
     setIsOpen(!isOpen);
   };
 
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
   const currentHour = new Date().getHours();
 
   let greeting;
@@ -61,7 +61,7 @@ const Dashboard = () => {
       <main className="main-content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
 
         <div className="hello">
-          {greeting}, {user?.fullName || "User"}
+          {loading ? "Loading..." : `${greeting()}, ${user?.username || "User"}`}
         </div>
 
         <div className="stats-section">

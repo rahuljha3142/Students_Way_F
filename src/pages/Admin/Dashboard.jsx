@@ -63,7 +63,7 @@ const Dashboard = () => {
         <div className="hello">
           {user ? (
             <div className="hello">
-              {greeting}, {user.username}
+              {greeting}, {user.fullName}
             </div>
           ) : (
             <div className="hello">

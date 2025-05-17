@@ -30,12 +30,7 @@ const Dashboard = () => {
     },
   };
 
-  // Dummy event calendar data
-  // const events = [
-  //   { date: '18', day: 'Tue', event: 'Science Fair', color: 'green' },
-  //   { date: '14', day: 'Fri', event: 'PTA Meeting', color: 'blue' },
-  //   { date: '27', day: 'Thu', event: 'Sports Day', color: 'red' },
-  // ];
+
 
   const [isOpen, setIsOpen] = useState(true);
 

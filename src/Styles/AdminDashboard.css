@@ -35,6 +35,26 @@ body {
   align-items: center;
 }
 
+.hello {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #4e73df, #1cc88a);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.hello:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
 .search-bar {
   padding: 8px;
   border-radius: 5px;

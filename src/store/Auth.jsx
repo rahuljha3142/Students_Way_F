@@ -44,9 +44,11 @@ export const AuthProvider = ({children}) => {
     }
 
 
-    useEffect(() => {
+   useEffect(() => {
+    if (token) {
         userAuthentication();
-    }, []);
+    }
+    }, [token]);
 
     return <AuthContext.Provider value={{ isLoggedIn, storeTokenInLS, LogoutUser, user}}>
         {children}

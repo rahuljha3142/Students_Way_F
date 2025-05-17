@@ -61,7 +61,7 @@ const Dashboard = () => {
       <main className="main-content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
 
         <div className="hello">
-          {loading ? "Loading..." : `${greeting()}, ${user?.username || "User"}`}
+          {loading ? "Loading..." : `${greeting}, ${user?.fullName || "User"}`}
         </div>
 
         <div className="stats-section">

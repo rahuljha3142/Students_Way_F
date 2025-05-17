@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../../Styles/AdminDashboard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faGooglePlusG, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -38,19 +38,29 @@ const Dashboard = () => {
     setIsOpen(!isOpen);
   };
 
-  const { user, loading } = useAuth();
-  const currentHour = new Date().getHours();
+  const { user } = useAuth();
+  const [greeting, setGreeting] = useState("");
+  const [username, setUsername] = useState("");
 
-  let greeting;
-  if (currentHour < 12) {
-    greeting = "Good Morning";
-  } else if (currentHour < 17) {
-    greeting = "Good Afternoon";
-  } else if (currentHour < 20) {
-    greeting = "Good Evening";
-  } else {
-    greeting = "Good Night";
+  useEffect(() => {
+    const hour = new Date().getHours();
+
+    if (hour < 12) setGreeting("Good Morning");
+    else if (hour < 17) setGreeting("Good Afternoon");
+    else if (hour < 20) setGreeting("Good Evening");
+    else setGreeting("Good Night");
+  }, []);
+
+  useEffect(() => {
+    if (user && user.username) {
+      setUsername(user.username);
+    }
+  }, [user]);
+
+  if (!username) {
+    return <p>Loading...</p>; // while username is loading
   }
+
 
   return (
     <div className="dashboard">
@@ -61,7 +71,7 @@ const Dashboard = () => {
       <main className="main-content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
 
         <div className="hello">
-          {loading ? "Loading..." : `${greeting}, ${user?.fullName || "User"}`}
+          {greeting}, {username}
         </div>
 
         <div className="stats-section">

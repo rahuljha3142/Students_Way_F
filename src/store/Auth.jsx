@@ -7,7 +7,6 @@ export const AuthContext = createContext();
 export const AuthProvider = ({children}) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState("");
-  const [loading, setLoading] = useState(true);
 
     const storeTokenInLS = (serverToken) => {
         return localStorage.setItem("token", serverToken);
@@ -41,8 +40,6 @@ export const AuthProvider = ({children}) => {
             }
         } catch (error) {
             console.error("Error fetching data");
-        }  finally {
-            setLoading(false); 
         }
     }
 
@@ -51,7 +48,7 @@ export const AuthProvider = ({children}) => {
         userAuthentication();
     }, []);
 
-    return <AuthContext.Provider value={{ isLoggedIn, storeTokenInLS, LogoutUser, user, loading }}>
+    return <AuthContext.Provider value={{ isLoggedIn, storeTokenInLS, LogoutUser, user}}>
         {children}
     </AuthContext.Provider>
 }

@@ -61,15 +61,7 @@ const Dashboard = () => {
       <main className="main-content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
 
         <div className="hello">
-          {user ? (
-            <div className="hello">
-              {greeting}, {user.fullName}
-            </div>
-          ) : (
-            <div className="hello">
-              Loading...
-            </div>
-          )}
+          {greeting}, {user?.fullName || "User"}
         </div>
 
         <div className="stats-section">

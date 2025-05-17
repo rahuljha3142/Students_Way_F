@@ -4,7 +4,8 @@ export const AuthContext = createContext();
 
 // eslint-disable-next-line react/prop-types
 export const AuthProvider = ({children}) => {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const [user, setUser] = useState("");
 
     const storeTokenInLS = (serverToken) => {
         return localStorage.setItem("token", serverToken);
@@ -21,7 +22,32 @@ export const AuthProvider = ({children}) => {
         return localStorage.removeItem("token");
     };
 
-    return <AuthContext.Provider value={{ isLoggedIn, storeTokenInLS, LogoutUser }}>
+     // to get the user data - currently logged in user data
+    const userAuthentication = async() => {
+        try {
+            const response = await fetch("http://localhost:5000/api/auth/user", {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+
+            if(response.ok) {
+                const data = await response.json();
+                console.log("user data", data);
+                setUser(data);
+            }
+        } catch (error) {
+            console.error("Error fetching data");
+        }
+    }
+
+
+    useEffect(() => {
+        userAuthentication();
+    }, []);
+
+    return <AuthContext.Provider value={{ isLoggedIn, storeTokenInLS, LogoutUser, user }}>
         {children}
     </AuthContext.Provider>
 }

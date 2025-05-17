@@ -6,6 +6,7 @@ import { faUser, faChalkboardTeacher, faUsers, faDollarSign } from '@fortawesome
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 import Sidebar from './Sidebar';
+import { useAuth } from '../../store/Auth';
 
 const Dashboard = () => {
   // Data for Fees Collection & Expenses
@@ -42,6 +43,20 @@ const Dashboard = () => {
     setIsOpen(!isOpen);
   };
 
+  const { user } = useAuth();
+  const currentHour = new Date().getHours();
+
+  let greeting;
+  if (currentHour < 12) {
+    greeting = "Good Morning";
+  } else if (currentHour < 17) {
+    greeting = "Good Afternoon";
+  } else if (currentHour < 20) {
+    greeting = "Good Evening";
+  } else {
+    greeting = "Good Night";
+  }
+
   return (
     <div className="dashboard">
       
@@ -49,6 +64,11 @@ const Dashboard = () => {
 
       
       <main className="main-content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
+
+        <div className="hello">
+          {greeting}, {user?.fullName || "User"}
+        </div>
+
         <div className="stats-section">
           <div className="stat-box">
             <FontAwesomeIcon icon={faUser} className="icon" />

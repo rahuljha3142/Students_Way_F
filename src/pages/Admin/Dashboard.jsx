@@ -58,7 +58,7 @@ const Dashboard = () => {
     <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
 
       
-      <main className="main-content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
+      <main className="main-content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
 
        <div className="hello">
         {user === null ? (

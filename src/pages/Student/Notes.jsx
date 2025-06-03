@@ -77,7 +77,7 @@ const Notes = () => {
     <div>
       <div className="NotesContainer">
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-        <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
           <div className="NotesContent">
             <h2 className="NotesHeader">Student Notes</h2>
             {editingNoteId ? (

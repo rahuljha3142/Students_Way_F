@@ -35,7 +35,7 @@ const Announcement = () => {
     <div className="AnnouncementContainer">
       <ToastContainer />
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         {/* <div className="AnnouncementContent"> */}
           <h1 className="Title">Announcements</h1>
           <form className="AnnouncementForm" onSubmit={addNewAnnouncement}>

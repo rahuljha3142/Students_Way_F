@@ -51,7 +51,7 @@ const ExamSection = () => {
   return (
     <div className='ExamContainer'>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         <div className="ExamContent">
           <h2 className="ExamHeader">Exam Results</h2>
           <div className="ExamResultsContainer">

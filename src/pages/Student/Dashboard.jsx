@@ -1,66 +1,3 @@
-// import { useState } from "react";
-// import Sidebar from './Sidebar';
-// import "../../Styles/Dashboard.css";
-
-// const Dashboard = () => {
-
-//   const [isOpen, setIsOpen] = useState(true);
-
-//   const toggleSidebar = () => {
-//     setIsOpen(!isOpen);
-//   };
-
-//   return (
-      
-//     <div className="AdminDashboardContainer" >
-//       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-//       <div className='Content' style={{ marginLeft: isOpen ? '260px' : '85px' }}>
-//         <div className="TopContent">
-//           <section>
-//             <div className="SectionTitle">
-//               <h1>Overview</h1>
-//             </div>
-//             <div className="CardContainer">
-//               <div className="Card">
-//                 <h3 className="CardTitle">Total Students</h3>
-//                 <p className="CardContent">500</p>
-//               </div>
-//               <div className="Card">
-//                 <h3 className="CardTitle">Total Teachers</h3>
-//                 <p className="CardContent">50</p>
-//               </div>
-//               <div className="Card">
-//                 <h3 className="CardTitle">Total Classes</h3>
-//                 <p className="CardContent">50</p>
-//               </div>
-//             </div>
-//           </section>
-
-//           <section>
-//             <div className="SectionTitle">
-//               Recent Activity
-//             </div>
-//           </section>
-//           <section>
-//             <div className="SectionTitle">
-//               Upcoming Events
-//             </div>
-//           </section>
-//         </div>
-
-        
-
-//       </div>
-//     </div>
-  
-// )
-//   }
-  
-//   export default Dashboard
-
-
-
-
 import { useState } from "react";
 import Sidebar from './Sidebar';
 import { Avatar, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material';
@@ -76,7 +13,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
       {/* <div className="content"> */}
         <div className="header">
           <Typography variant="h5">WELCOME BACK! GAURAV</Typography>

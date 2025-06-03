@@ -21,7 +21,7 @@ const ClassSection = () => {
   return (
     <div className="ClassContainer">
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px', transition: 'all ease 0.8s' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px', transition: 'all ease 0.8s' }}>
         <h2 className="ClassHeader">Classes</h2>
         <div className="ClassList">
           {classes.map((classItem, index) => (

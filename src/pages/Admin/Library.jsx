@@ -40,7 +40,7 @@ const Library = () => {
   return (
     <div className='LibraryContainer'>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}  />
-      <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         <h1 className="Title">Library Management</h1>
         <form onSubmit={addNewBook} className="AddBookForm">
           <h2>Add New Book</h2>

@@ -23,7 +23,7 @@ const Library = () => {
   return (
     <div className="LibraryContainer">
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         <h2 className="LibraryHeader">Library</h2>
         <ul className="BookList">
           {books.map((book) => (

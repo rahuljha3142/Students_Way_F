@@ -66,7 +66,7 @@ const Exams = () => {
   return (
     <div className="ExamContainer">
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
           <h2 className="ExamHeader">Exams</h2>
           <form onSubmit={addNewExam} className="ExamForm">
             <input

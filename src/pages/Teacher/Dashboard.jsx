@@ -33,7 +33,7 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="main-content" style={{ marginLeft: isOpen ? '260px' : '80px', transition: 'all ease 0.8s' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px', transition: 'all ease 0.8s' }}>
         <div className="dashboard-cards">
           <div className="card">
             <div className="card-icon"><i className="fa fa-user"></i></div>

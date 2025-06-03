@@ -37,7 +37,7 @@ const QuestionGenerator = () => {
   return (
     <div className="question-generator-container">
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="question-generator-card" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="question-generator-card" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         <Typography variant="h5" gutterBottom align="center">
           Question Generator
         </Typography>

@@ -21,7 +21,7 @@ const AttendanceSection = () => {
   return (
     <div className='AttendanceContainer'>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         <div className="AttendanceContent">
           <h2 className="AttendanceHeader">Attendance</h2>
           <ul className="AttendanceList">

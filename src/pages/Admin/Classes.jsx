@@ -31,7 +31,7 @@ const Classes = () => {
   return (
     <div className='ClassesContainer'>
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         <div className="ClassesContent">
           <h2 className="ClassesHeader">Classes</h2>
           <form onSubmit={addNewClass} className="AddClassForm">

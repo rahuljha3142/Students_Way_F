@@ -36,7 +36,7 @@ const Profile = () => {
   return (
     <div className="ProfileContainer">
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
         <h2 className="ProfileHeader">Profile</h2>
         <div className="ProfileInfo">
           {isEditing ? (

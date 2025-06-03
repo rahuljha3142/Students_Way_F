@@ -63,7 +63,7 @@ const Events = () => {
   return (
     <div className="EventCalendarContainer">
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-      <div className="Content" style={{ marginLeft: isOpen ? '260px' : '80px', transition: 'all ease 0.8s' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px', transition: 'all ease 0.8s' }}>
         <h2 className="EventCalendarHeader">Event Calendar</h2>
         <div>Current Time: {currentTime}</div>
         <form onSubmit={addNewEvent} className="EventForm">

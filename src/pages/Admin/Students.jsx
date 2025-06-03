@@ -46,7 +46,7 @@ const Students = () => {
     <div>
       <div className="StudentsContainer">
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-        <div className="Content" style={{ marginLeft: isOpen ? '220px' : '60px' }}>
+      <div className="Content" style={{ marginLeft: isOpen ? '270px' : '70px' }}>
           <div className="StudentsContent">
             <h2 className="StudentsHeader">Students </h2>
             <form action="" onSubmit={addNewStudent}>

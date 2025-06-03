@@ -1,16 +1,18 @@
 import { NavLink } from 'react-router-dom';
 import {
-  BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear, BsBoxArrowLeft,
-  BsChatDots, BsListTask, BsFillQuestionOctagonFill
+  BsGraphUp, BsFileText, BsBook, BsGraphDown, BsCalendar, BsGear,
+  BsChatDots, BsListTask, BsFillQuestionOctagonFill, BsBoxArrowLeft,
 } from 'react-icons/bs';
+import { FaIdCard } from "react-icons/fa";
 import { CgNotes } from "react-icons/cg";
+import { MdCastForEducation } from "react-icons/md";
 import "../../Styles/Sidebar.css";
 import bg1 from "../../assets/student.png";
 import PropTypes from 'prop-types';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
-    <div className="SidebarContainer" style={{ width: isOpen ? '250px' : '46px' }}>
+    <div className="SidebarContainer" style={{ width: isOpen ? '270px' : '70px' }}>
       <div className="SidebarHeader">
         <img className="Logo" src={bg1} alt="logo" />
       </div>
@@ -19,6 +21,24 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <NavLink className="SidebarNavItem" to="/student/dashboard">
             <div className="SidebarIcon"><BsGraphUp /></div>
             <span className="SidebarLabel">Dashboard</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="SidebarNavItem" to="/student/question-generator">
+            <div className="SidebarIcon"><BsFillQuestionOctagonFill /></div>
+            <span className="SidebarLabel">MCQ Generator</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="SidebarNavItem" to="/student/education-recommendation">
+            <div className="SidebarIcon"><MdCastForEducation /></div>
+            <span className="SidebarLabel">Carrier Recommendation System</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="SidebarNavItem" to="/student/idcard-generator">
+            <div className="SidebarIcon"><FaIdCard /></div>
+            <span className="SidebarLabel">Id Card Generator</span>
           </NavLink>
         </li>
         <li>
@@ -37,12 +57,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <NavLink className="SidebarNavItem" to="/student/notes">
             <div className="SidebarIcon"><CgNotes /></div>
             <span className="SidebarLabel">Notes</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="SidebarNavItem" to="/student/mcq">
-            <div className="SidebarIcon"><BsFillQuestionOctagonFill /></div>
-            <span className="SidebarLabel">MCQ Generator</span>
           </NavLink>
         </li>
         <li>

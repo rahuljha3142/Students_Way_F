@@ -44,6 +44,9 @@ import AttendanceSection from '../src/pages/Student/Attendence';
 import LibrarySection from '../src/pages/Student/Library';
 import AnnouncementSection from '../src/pages/Student/Announcement';
 import ProfileSection from '../src/pages/Student/Profile';
+import QuestionGenerator from "../src/pages/Student/QuestionGenerator";
+import CarrierRecommendation from "../src/pages/Student/CarrierRecommendation";
+import IdCardGenerator from "../src/pages/Student/IdCardGenerator";
 
 // Teachers
 import ClassSection from '../src/pages/Teacher/Classes';
@@ -120,6 +123,9 @@ function App() {
           <Route exact path="/student/library" element={<LibrarySection />} />
           <Route exact path="/student/communication" element={<AnnouncementSection/>} />
           <Route exact path="/student/settings" element={<ProfileSection />} />
+          <Route exact path="/student/question-generator" element={<QuestionGenerator />} />
+          <Route exact path="/student/education-recommendation" element={<CarrierRecommendation />} />
+          <Route exact path="/student/idcard-generator" element={<IdCardGenerator />} />
 
           {/* Teachers sections here */}
 

@@ -11,7 +11,7 @@ const QuestionGenerator = () => {
   const [questions, setQuestions] = useState([]);
 
   const handleGenerate = async () => {
-    const res = await fetch('http://localhost:5000/api/questions/generate', {
+    const res = await fetch('https://students-way-b.onrender.com/api/questions/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ subject, classLevel, topic, numQuestions }),

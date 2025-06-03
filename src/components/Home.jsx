@@ -16,7 +16,7 @@ const Home = () => {
             <div className="SchoolInfo">
                 <h1>School Management System</h1>
                 <p className="TextContainer">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas molestias libero ipsum sit consequuntur illo ut praesentium officiis amet delectus commodi quos dolore sapiente fugit quaerat hic architecto, ab natus porro. Temporibus, nam distinctio.
+                  Discover your ideal career path with our smart recommendation platform. This system analyzes your academic performance, interests, and skills to suggest the most suitable career options. Whether you're uncertain about the future or exploring new possibilities, our tool provides personalized guidance to help you make informed decisions for a successful career.
                 </p>
                     {/* <NavLink className="HomeLink" to="/admin-register">Admin Register</NavLink> */}
             </div>

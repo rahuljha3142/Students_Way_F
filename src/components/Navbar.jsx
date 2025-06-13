@@ -17,7 +17,7 @@ export const Navbar = () => {
   return (
     <>
       <nav className="Navbar">
-        <h1 className="Logo">Students_Way</h1>
+        <h1 className="Logo">MyEduPath</h1>
 
         {/* Hamburger icon */}
         <div className="Hamburger" onClick={toggleMenu}>

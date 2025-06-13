@@ -14,7 +14,7 @@ const Home = () => {
 
         <div className="HomeContainer">
             <div className="SchoolInfo">
-                <h1>School Management System</h1>
+                <h1>Student Carrier Recommendation System</h1>
                 <p className="TextContainer">
                   Discover your ideal career path with our smart recommendation platform. This system analyzes your academic performance, interests, and skills to suggest the most suitable career options. Whether you're uncertain about the future or exploring new possibilities, our tool provides personalized guidance to help you make informed decisions for a successful career.
                 </p>

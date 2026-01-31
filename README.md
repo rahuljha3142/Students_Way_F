@@ -51,7 +51,7 @@ JWT_SECRET=your_super_secret_key_here
 PORT=5000
 ```
 
-# 🏃‍♂️ Run Locally
+### 🏃‍♂️ Run Locally
 Clone the project:
 
 ```Bash
@@ -88,7 +88,7 @@ npm run dev
 
 (The frontend will start on port 5173)
 
-# 📂 Project Structure
+### 📂 Project Structure
 ```Bash
 school-management-system/
 ├── server/                 # Backend Node.js/Express Application
@@ -111,14 +111,14 @@ school-management-system/
 └── package.json            # Root configuration
 ```
 
-# 🚀 Deployment
+### 🚀 Deployment
 This project is configured for seamless deployment on Vercel.
 
 Frontend: Vercel
 
 Backend: Render
 
-# 📬 Contact
+### 📬 Contact
 
 Rahul Raj
 

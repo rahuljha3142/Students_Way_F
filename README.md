@@ -10,7 +10,7 @@ A comprehensive web application designed to streamline administrative tasks for 
 
 ## 🚀 Live Demo
 
-**[View Live Page](http://students-way-f.vercel.app/)**
+**[View Live Page](http://students-way-f.vercel.app/_)**
 
 ## ✨ Key Features
 
